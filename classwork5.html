@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online store</title>
+</head>
+<body>
+    
+    <h1>Online Store</h1>
+
+    <!-- buttton if cehck item return -->
+    <button onclick="check()">Return Item</button>
+    <p id="checkresult"></p>
+    <p id="checkname"></p>
+    <p id="order"></p>
+
+    <script>
+
+        /* create object */
+        var items = {
+            name: "Sugar",
+            isDelivered: true,
+            daysSinceDelivery : 3 ,
+        };
+
+        /* fucntion to check return eligible and return expired */
+        function check(){
+
+            /* check item delivered and return days */
+            var msg = (items.isDelivered && items.daysSinceDelivery <= 7) ? "Eligible for Return" : "Return Period Expired";
+
+            document.getElementById("checkresult").innerHTML = msg;
+
+            /* check if 'name' property exists 'in' object using in operator  and display it*/
+            var itemname = "name" in items? "Item name exists in order" : "Item name missing";
+            document.getElementById("checkname").innerHTML = itemname;
+
+            /* delete daysSinceDelivery */
+            delete items.daysSinceDelivery;
+
+            /* diplay update order */
+            document.getElementById("order").innerHTML = "Updated Order :  " + "Name : "+ items.name + ", isDelivered:  " + items.isDelivered;
+        }
+
+    </script>
+</body>
+</html>

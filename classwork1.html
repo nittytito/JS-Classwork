@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Store</title>
+</head>
+<body>
+
+    <h1>Online Store</h1>
+
+    <p id="Total Earnings"></p>
+    <p id="Update TotalEarnings"></p>
+
+    <script>
+        var cshirt = 5;
+        var pshirt = 400;
+        var ccap = 3;
+        var pcap = 150;
+
+        /* calculate total earnings */
+        var totalearnings = (cshirt * pshirt) + (ccap * pcap );
+
+        /* display total earnings with id */
+        document.getElementById("Total Earnings").innerHTML = "Total Earnings : " + totalearnings;
+
+        /* update price */
+        pshirt = 450;
+
+        /* recalculate total earnings */
+        var updatetotalearnings =  (cshirt * pshirt) + (ccap * pcap);
+
+        /* display update total earning with id */
+        document.getElementById("Update TotalEarnings").innerHTML = "Update_Total_Earnings : " + updatetotalearnings;
+    </script>
+</body>
+</html>

@@ -11,28 +11,20 @@
     <p id="arraywords"></p>
     <script>
 
-        /* original feedback with include extra space and upper letters*/
         var feedback = "   I loved the FOOD and the service!   ";
 
-        /* removing extra spaces */
         feedback = feedback.trim();
 
-        /* convert lower case */
         feedback = feedback.toLowerCase();
 
-        /* replace the word food withambience nd display */
         document.getElementById("feedback").innerHTML = feedback.replace("food" , "ambience");
 
-        /* find position */
         var position = feedback.indexOf("service");
     
-        /* split feedback string into array */
         var arraywords = feedback.split(" ");
 
-        /* display position */
         document.getElementById("position").innerHTML = "Position of 'service': " + position;
 
-        /* display array of words and join commas */
         document.getElementById("arraywords").innerHTML = "Array of words  :   "  +  arraywords.join(", ");
   
 

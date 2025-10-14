@@ -16,28 +16,24 @@
     <p id="result"></p>
     <script>
 
-        /* generate random numbers */
         var random = Math.floor(Math.random() * 100)+1;
         document.getElementById("random").innerHTML = random ;
 
-        /* user score as a string */
         var score = "75";
         var numberscore = Number(score);
         document.getElementById("score").innerHTML = "Score : " + numberscore;
 
-        /* calculate absolute difference between random and numberscore and display it */
         var difference = Math.abs(random - numberscore);
         document.getElementById("difference").innerHTML = "Difference = " + difference;
 
-        /* calculate square root and display it */
+      
         var squareroot = Math.round(Math.sqrt(numberscore));
         document.getElementById("squareroot").innerHTML = "Square Root =" + squareroot
 
-        /* display value of PI */
         var pivalue = Math.PI;
         document.getElementById("Pi").innerHTML = "Constant = " +  pivalue;
 
-        /* conversion multiply string 50 by 2 and display  */
+       
         var result = "50" * 2;
         document.getElementById("result").innerHTML = "Result = " + result;
 

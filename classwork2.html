@@ -8,26 +8,21 @@
 <body>
     <script>
 
-        /* create object  */
         var book = {
                 bookname : "The Alchemist",
                 author : "Paulo Coelho",
                 year : 1988,
 
-        /* method to return a summary of the book */
         getSummary : function() {
 
-            /* 'this' refers to the current object */
             return "The book '" + this.bookname + "' was written by " + this.author + " in " + this.year + ".";
         }
     };
 
-        /* function to print the summary */
         function printBookSummary(bookobj) {
             console.log(bookobj.getSummary());
         }
 
-        /* call the function with the book object */
         printBookSummary(book);
     </script>
 </body>

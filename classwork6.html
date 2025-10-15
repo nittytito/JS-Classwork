@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Grocery</title>
+</head>
+<body>
+    <h1>Online Grocery</h1>
+    <p id="array"></p>
+    <p id="greaterthan"></p>
+    <p id="update"></p>
+    <script>
+
+        var product=["Apple","Mango","Banana"];
+        var price=[50,60,40];
+        var PRODUCTS = [];
+        var greater = [];
+        var update =[];
+
+        for (var i =0 ; i < product.length ; i++) {
+            PRODUCTS.push("Product: " +  product[i]+"<br>"  +  "Price: "+ price[i] + "<br>");
+            (price[i]>50) && greater.push(product[i] + "=" + price[i]);
+        }
+        document.getElementById("array").innerHTML= "PRODUCTS <br><br>".concat(PRODUCTS.join(" "));
+        document.getElementById("greaterthan").innerHTML = "Product with price>50 is <br>"+greater;
+
+        product.push("Watermelon");
+        price.push(70);
+       
+        for (var i =0 ; i < product.length ; i++) {
+            update.push("Products: " +  product[i]+"<br>" + "Price: " + price[i] + "<br>");
+        }
+        document.getElementById("update").innerHTML= "PRODUCTS <br><br>".concat(update.join(" "));
+    </script>
+</body>
+</html>

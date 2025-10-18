@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <h1>Grocery Store</h1>
+    <script>
+       
+        for(var i=1; i<5; i++)
+        {
+            var code = parseInt(prompt("Enter the code:"));
+            var quantity = parseInt(prompt("Enter quantity:"));
+            var price = 0;
+            var item ="";
+            switch(code) 
+            {
+                case 1:
+                    item = "Apple";
+                    price = 30*quantity; 
+                    break;
+                case 2:
+                    item = "Banana";
+                    price = 10*quantity;
+                    break;
+                case 3:
+                    item = "Mango";
+                    price = 50*quantity;
+                    break;
+                default:
+                    alert("Invalid");
+                    continue;
+            }
+
+        document.write("Item:" +  item + "<br>" + " Quantity:" + quantity + "<br>" + "Price:" + price + "<br>" );
+
+        if (price>100) 
+        {
+            document.write("High purchase<br><br>");
+        }
+        else
+        {
+            document.write("Normal purchase<br><br>");
+        }
+    }
+
+    
+    </script>
+</body>
+</html>

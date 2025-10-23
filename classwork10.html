@@ -16,10 +16,10 @@
         var convert = JSON.parse(person);
         var display = () => {
         try {
-            document.getElementById("form").innerHTML=`Message received from ${convert.name}`;
+            console.log(`Message received from ${convert.name}`);
         }
         catch(error){
-            document.getElementById("form").innerHTML="Error";
+            console.log("Error");
         }
     }
     display();

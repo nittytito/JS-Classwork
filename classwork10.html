@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <p id="form"></p>
+    <script>
+        var person =`{
+            "name":"Miya",
+            "email":"miya@gmail.com",
+            "message":"Hai Everyone"
+        }`
+        var convert = JSON.parse(person);
+        var display = () => {
+        try {
+            document.getElementById("form").innerHTML=`Message received from ${convert.name}`;
+        }
+        catch(error){
+            document.getElementById("form").innerHTML="Error";
+        }
+    }
+    display();
+    </script>
+</body>
+</html>
+
+
+
+
+

@@ -6,7 +6,6 @@
     <title>Form</title>
 </head>
 <body>
-    <p id="form"></p>
     <script>
         var person =`{
             "name":"Miya",
@@ -18,8 +17,8 @@
         try {
             console.log(`Message received from ${convert.name}`);
         }
-        catch(error){
-            console.log("Error");
+        catch(err) {
+            console.log("Error"+err);
         }
     }
     display();

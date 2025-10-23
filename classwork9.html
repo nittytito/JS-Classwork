@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CW JS day 9</title>
+ </head>
+ <body>
+   <h1>Comment System</h1>
+    <p id="comment"></p>
+    <script>
+        var comment="My son is 12 years old. Our flat number is 45 and contact is 9876543210.";
+        var reg=/\d+/g;
+        var found=reg.test(comment);
+        var update_comment = comment.replace(reg,"NUMBER");
+        document.getElementById("comment").innerHTML = `<b>Number Found:</b> ${found}<br><b>Updated Comment:</b> ${update_comment}`;
+
+    </script>
+ </body>
+ </html>

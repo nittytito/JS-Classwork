@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store</title>
+</head>
+<body>
+    <h1>Book Store</h1>
+    <p id="store"></p>
+    <p id="mybook"></p>
+    <script>
+        class Book{
+            constructor(title,author,price){
+                this.title=title;
+                this.author=author;
+                this.price=price;
+            }
+
+            getTitle(){
+                return this.title;
+            }
+            getAuthor(){
+                return this.author;
+            }
+            setPrice(newPrice){
+                this.price=newPrice;
+                if(typeof newPrice=="number" && newPrice>0){
+                    return "Price Updated";
+                }
+                else{
+                    return "Price not Updated";
+                }
+            }
+            getDisplay(){
+                return "Title:"+this.title+"<br>Author:"+this.author+"<br>Price:"+this.price;
+            }
+        }
+    
+        var myBook=new Book("To Kill a MockingBird","Harper Lee",120);
+        document.getElementById("store").innerHTML=myBook.getDisplay();
+        myPrice=myBook.setPrice(150);
+        document.getElementById("mybook").innerHTML=myBook.getDisplay();
+    </script>
+</body>
+</html>
+
+

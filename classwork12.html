@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page</title>
+</head>
+<body>
+    <p style="color: blue;"></p>
+    <h1>Web Page</h1>
+    <form id="myForm" >
+        <input type="text"  id="users" placeholder="Type..."><br><br>
+        <button type="button" onclick="showPara()">Submit</button>
+    </form>
+    <p id="display" onmouseover="userHover()"  onmouseout="userOut()" style="color: blue;"></p>
+    <script>
+        function showPara(){
+            var input=document.getElementById("users").value;
+            var display=document.getElementById("display");
+            display.innerHTML=input;
+            display.style.color="blue";
+        }
+        function userHover() {
+            document.getElementById("display").style.color = "green";
+        }
+
+        function userOut() {
+            document.getElementById("display").style.color = "blue";
+        }
+    </script>
+</body>
+</html>
+
+
+ 
